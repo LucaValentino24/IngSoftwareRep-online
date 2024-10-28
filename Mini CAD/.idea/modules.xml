@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MiniCAD.iml" filepath="$PROJECT_DIR$/MiniCAD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Mini CAD.iml" filepath="$PROJECT_DIR$/Mini CAD.iml" />
     </modules>
   </component>
 </project>
