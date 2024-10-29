@@ -1,6 +1,5 @@
 package manipolatoreOggetti.InterpreteComandi;
 
-import manipolatoreOggetti.controller.Main;
 import manipolatoreOggetti.model.ImageObject;
 
 import javax.swing.*;

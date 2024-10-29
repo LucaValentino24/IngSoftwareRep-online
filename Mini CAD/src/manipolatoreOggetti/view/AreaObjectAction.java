@@ -2,7 +2,6 @@ package manipolatoreOggetti.view;
 
 import manipolatoreOggetti.command.CommandHandler;
 import manipolatoreOggetti.specificcommand.AreaCommand;
-import manipolatoreOggetti.specificcommand.PerimeterCommand;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

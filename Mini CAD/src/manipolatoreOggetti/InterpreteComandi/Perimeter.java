@@ -2,7 +2,6 @@ package manipolatoreOggetti.InterpreteComandi;
 
 import manipolatoreOggetti.command.CommandHandler;
 import manipolatoreOggetti.view.GraphicObjectPanel;
-import manipolatoreOggetti.view.ListObjectAction;
 import manipolatoreOggetti.view.PerimeterObjectAction;
 
 import java.awt.event.ActionEvent;

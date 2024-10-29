@@ -1,7 +1,6 @@
 package manipolatoreOggetti.view;
 
 import manipolatoreOggetti.command.CommandHandler;
-import manipolatoreOggetti.specificcommand.ListCommand;
 import manipolatoreOggetti.specificcommand.PerimeterCommand;
 
 import javax.swing.*;

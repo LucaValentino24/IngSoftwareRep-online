@@ -1,7 +1,6 @@
 package manipolatoreOggetti.view;
 
 import manipolatoreOggetti.command.CommandHandler;
-import manipolatoreOggetti.model.AbstractGraphicObject;
 import manipolatoreOggetti.model.GraphicObject;
 import manipolatoreOggetti.specificcommand.GrpCommand;
 

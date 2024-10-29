@@ -2,7 +2,6 @@ package manipolatoreOggetti.view;
 
 import manipolatoreOggetti.InterpreteComandi.Pos;
 import manipolatoreOggetti.command.CommandHandler;
-import manipolatoreOggetti.model.AbstractGraphicObject;
 import manipolatoreOggetti.specificcommand.MoveCommand;
 
 import javax.swing.*;

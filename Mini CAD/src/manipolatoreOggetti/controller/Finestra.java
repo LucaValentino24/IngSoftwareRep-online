@@ -18,7 +18,7 @@ public class Finestra extends JFrame {
     private final int LENGTH = 1000;
     private final int HEIGHT = 800;
     private final GraphicObjectPanel panel = new GraphicObjectPanel();
-    private final HistoryCommandHandler hystoryHandler = new HistoryCommandHandler();
+    private final HistoryCommandHandler historyHandler = new HistoryCommandHandler();
     private final NaiveCommandHandler naiveHandler = new NaiveCommandHandler();
 
     public Finestra(){
@@ -56,7 +56,7 @@ public class Finestra extends JFrame {
         campoTesto.addActionListener(e -> {
             String comando = campoTesto.getText();
             StringReader sr = new StringReader(comando);
-            RicercaComandi rc = new RicercaComandi(sr,panel, hystoryHandler, naiveHandler);
+            RicercaComandi rc = new RicercaComandi(sr,panel, historyHandler, naiveHandler);
             ComandoIF com = rc.getComando();
             if(com instanceof ListC){
                 ListC l = (ListC) com;
