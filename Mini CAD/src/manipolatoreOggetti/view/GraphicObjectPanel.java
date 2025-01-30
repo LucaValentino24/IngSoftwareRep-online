@@ -24,6 +24,7 @@ public class GraphicObjectPanel extends JComponent implements GraphicObjectListe
 	 */
 
 	public final List<GraphicObject> objects = new LinkedList<>();
+	public List<Integer> ids = new LinkedList<>();
 
 
 	public GraphicObjectPanel() {
@@ -84,7 +85,10 @@ public class GraphicObjectPanel extends JComponent implements GraphicObjectListe
 	}
 
 	public void add(GraphicObject go) {
+		if(ids.contains(go.getId()))
+			throw new SyntaxException("esiste già un oggetto con questo id");
 		objects.add(go);
+		ids.add(go.getId());
 		go.addGraphicObjectListener(this);
 		repaint();
 	}
@@ -92,8 +96,10 @@ public class GraphicObjectPanel extends JComponent implements GraphicObjectListe
 	public void remove(GraphicObject go) {
 		if (objects.remove(go)) {
 			if(go instanceof GroupObject)
-				for(GraphicObject g:((GroupObject) go).getObjects())
+				for(GraphicObject g:((GroupObject) go).getObjects()) {
 					objects.remove(g);
+					ids.remove(g.getId());
+				}
 			repaint();
 			go.removeGraphicObjectListener(this);
 		}

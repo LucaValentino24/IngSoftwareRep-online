@@ -83,6 +83,7 @@ public class Finestra extends JFrame {
             }
             else
                 com.interpreta(e);
+            campoTesto.setText("");
         });
 
 

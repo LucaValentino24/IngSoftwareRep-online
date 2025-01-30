@@ -12,7 +12,7 @@ public class ImageObjectView implements GraphicObjectView {
 	public void drawGraphicObject(GraphicObject go, Graphics2D g) {
 		ImageObject io = (ImageObject) go;
 		Dimension2D dim = io.getDimension();
-		while(dim.getHeight() > 600 || dim.getWidth() > 600) {
+		while(dim.getHeight() > 500 || dim.getWidth() > 500) {
 			dim.setSize(dim.getWidth() * 0.9, dim.getHeight() * 0.9);
 		}
 		Point2D position = io.getPosition();
