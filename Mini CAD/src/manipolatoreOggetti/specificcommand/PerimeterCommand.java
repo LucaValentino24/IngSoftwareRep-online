@@ -1,6 +1,6 @@
 package manipolatoreOggetti.specificcommand;
 
-import manipolatoreOggetti.InterpreteComandi.SyntaxException;
+import manipolatoreOggetti.interpreteComandi.SyntaxException;
 import manipolatoreOggetti.command.Command;
 import manipolatoreOggetti.model.GraphicObject;
 import manipolatoreOggetti.view.GraphicObjectPanel;

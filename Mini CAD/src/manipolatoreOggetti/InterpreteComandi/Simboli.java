@@ -1,6 +1,0 @@
-package manipolatoreOggetti.InterpreteComandi;
-
-public enum Simboli {
-    NEW, DEL, MV, MVOFF, SCALE, LS, ALL, GROUPS, GRP, UNGRP, AREA, PERIMETER, CIRCLE,
-    RECTANGLE, IMG, TONDA_APERTA, TONDA_CHIUSA, VIRGOLA, NUMERO, PUNTO, PATH, CHAR_INVALIDO,EOF, UNDO, REDO
-}
