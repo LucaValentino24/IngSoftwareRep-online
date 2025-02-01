@@ -88,17 +88,17 @@ public class GraphicObjectPanel extends JComponent implements GraphicObjectListe
 		if(ids.contains(go.getId()))
 			throw new SyntaxException("esiste già un oggetto con questo id");
 		objects.add(go);
-		ids.add(go.getId());
+		ids.addFirst(go.getId());
 		go.addGraphicObjectListener(this);
 		repaint();
 	}
 
 	public void remove(GraphicObject go) {
-		if (objects.remove(go)) {
+		if (objects.remove(go) && ids.remove((Integer) go.getId())) {
 			if(go instanceof GroupObject)
 				for(GraphicObject g:((GroupObject) go).getObjects()) {
 					objects.remove(g);
-					ids.remove(g.getId());
+					ids.remove((Integer) g.getId());
 				}
 			repaint();
 			go.removeGraphicObjectListener(this);
