@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>371</x>
+      <y>35</y>
+      <w>175</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+GraphicObject
+--
+addGOL(GraphicObjectListener l)
+removeGOL(GraphicObjectListener l)
+moveTo(Point2D p)
+moveTo(double x, double y)
+getPosition():Point2D
+getDimension():Dimension2D
+scale(double factor)
+contains(Point2D):boolean
+getType():String
+getId():int
+clone():GraphicObject
+getProp():String
+getPerimeter():double
+getArea();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>378</x>
+      <y>245</y>
+      <w>175</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>/AbstractGraphicObject/
+--
+- listeners:GraphicObjectListener[]
+- id: int
+--
++ AbstractGraphicObject(int id)
++ getId():int
++ addGOL(GraphicObjectListener l)
++ removeGOL(GraphicObjectListener l)
+# notifyListeners(GraphicEvent e)
++ clone():GraphicObject</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>455</x>
+      <y>217</y>
+      <w>21</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>175</x>
+      <y>399</y>
+      <w>147</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>CircleObject
+--
+- position: Point2D
+- radius: double
+--
++ CircleObject(Point2D pos,
+double r, int id)
++ moveTo(Point2D p)
++ getPosition():Point2D
++ getDimension():Dimension2D
++ scale(double factor)
++ contains(Point2D):boolean
++ getType():String
++ getRadius():double
++ clone():CircleObject
++ getProp():String
++ getPerimeter():double
++ getArea():double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>357</y>
+      <w>21</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>238</x>
+      <y>364</y>
+      <w>231</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>310.0;10.0;10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>385</x>
+      <y>399</y>
+      <w>147</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>RectangleObject
+--
+- position: Point2D
+- dim: Dimension2D
+--
++ RectangleObject(Point2D pos,
+double w, double h, int id)
++ moveTo(Point2D p)
++ getPosition():Point2D
++ getDimension():Dimension2D
++ scale(double factor)
++ contains(Point2D):boolean
++ getType():String
++ clone():RectangleObject
++ getProp():String
++ getPerimeter():double
++ getArea():double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>602</x>
+      <y>399</y>
+      <w>147</w>
+      <h>203</h>
+    </coordinates>
+    <panel_attributes>ImageObject
+--
+- position: Point2D
+- factor: double
+- image: Image
+--
++ ImageObject(ImageIcon img, 
+Point2D pos, int id)
++ getImage():Image
++ moveTo(Point2D p)
++ getPosition():Point2D
++ getDimension():Dimension2D
++ scale(double factor)
++ contains(Point2D):boolean
++ getType():String
++ clone():ImageObject
++ getProp():String
++ getPerimeter():double
++ getArea():double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>364</y>
+      <w>231</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>310.0;50.0;310.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>364</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>784</x>
+      <y>399</y>
+      <w>231</w>
+      <h>217</h>
+    </coordinates>
+    <panel_attributes>GroupObject
+--
+- position: Point2D
+- objects: List&lt;GraphicObject&gt;
+--
++ GroupObject(int id, Point 2D pos)
++ moveTo(Point2D p)
++ getPosition():Point2D
++ getDimension():Dimension2D
++ scale(double factor)
++ contains(Point2D):boolean
++ getType():String
++ clone():GroupObject
++ getObjects():LinkedList&lt;AbstractGraphicObject&gt;
++ addObject(GraphicObject o)
++ removeObject(GraphicObject o)
++ removeAllObjects()
++ getProp():String
++ getPerimeter():double
++ getArea():double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>658</x>
+      <y>364</y>
+      <w>252</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>340.0;50.0;340.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>539</x>
+      <y>196</y>
+      <w>420</w>
+      <h>217</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+objects</panel_attributes>
+    <additional_attributes>580.0;290.0;580.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>

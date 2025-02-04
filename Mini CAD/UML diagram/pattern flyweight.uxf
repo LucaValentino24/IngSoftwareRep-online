@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>590</x>
+      <y>355</y>
+      <w>125</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+GraphicObjectView
+--
+drawGraphicObject(GraphicObject go,
+Graphics2D g)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>275</x>
+      <y>250</y>
+      <w>170</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>{enum}
+GraphicObjectViewFactory
+--
+
+createView(GraphicObject go):GraphicObjectView
+installView(Class&lt;? extends GraphicObject&gt; clazz, 
+GraphicObjectView view)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>280</y>
+      <w>270</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+- viewMap:HashMap &lt;Class&lt;? extends GraphicObject&gt;,GraphicObjectView&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;430.0;20.0;430.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>650</x>
+      <y>415</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>310.0;50.0;310.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>650</x>
+      <y>415</y>
+      <w>15</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>415</y>
+      <w>185</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>350.0;10.0;10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>650</x>
+      <y>395</y>
+      <w>15</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>425</x>
+      <y>440</y>
+      <w>130</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>RectangleObjectView
+--
++ drawGraphicObject(GraphicObject go,
+Graphics2D g)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>590</x>
+      <y>440</y>
+      <w>130</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>CircleObjectView
+--
++ drawGraphicObject(GraphicObject go,
+Graphics2D g)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>440</y>
+      <w>130</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>ImageObjectView
+--
++ drawGraphicObject(GraphicObject go,
+Graphics2D g)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>895</x>
+      <y>440</y>
+      <w>130</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>GroupObjectView
+--
++ drawGraphicObject(GraphicObject go,
+Graphics2D g)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>800</x>
+      <y>415</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>310.0;50.0;310.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>240</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>GraphicObjectPanel
+--
+_- serialVersionUID:long_
+- objects:List&lt;GraphicObject&gt;
+--
++ GraphicObjectPanel()
++ paintComponent(Graphics g)
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>255</y>
+      <w>380</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;740.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>295</y>
+      <w>160</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;160.0;300.0;160.0;300.0;10.0</additional_attributes>
+  </element>
+</diagram>
